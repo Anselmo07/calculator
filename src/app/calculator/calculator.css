@@ -1,19 +1,20 @@
 body{
-    background-image: url("https://i.pinimg.com/736x/e4/7a/fb/e47afbff5330359254d950bb95facce5.jpg");
+    background-image: url("../../../public/imgMatematica.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 
 .calculator {
-    margin: 5% 20% 1% 20%;
-    padding: 2%;
-    width: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 .divCalculator{
     border: 1px solid white;
     background-color: grey;
     border-radius: 5px;
-    height: 100%;
+    width:450px;
     margin: 5% 20% 1% 20%;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.9);
 }
@@ -25,7 +26,7 @@ body{
     border: 1px solid white;
     border-radius: 5px;
     margin: 3%;
-    height: 100px;
+    height: 70px;
     font-size: 24px;
     padding: 10px;
     background-color: black;
@@ -68,8 +69,8 @@ body{
     padding: 15px;
     font-size: 20px;
     cursor: pointer;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     background-color: white;
     color: black;
     transition: 0.2s;
@@ -83,13 +84,13 @@ body{
 
 .igual {
     grid-row: span 2;
-    height: 130px;
+    height: 102px;
     background-color: rgb(117, 219, 219);
 }
 
 .delete{
     grid-row: span 2;
-    height: 130px;
+    height: 102px;
     background-color: red;
     color: white;
 }
@@ -98,64 +99,34 @@ body{
     background-color: rgb(212, 203, 203);
 }
 
-/* Media Query para pantallas de tamaño medio (Tabletas y pantallas medianas) */
-@media (max-width: 768px) {
-    .calculator {
-        margin: 10% 5%;
-        width: 90vw; /* Ajuste el ancho para que ocupe un 90% del ancho de la ventana */
-    }
 
-    .divCalculator {
-        margin: 0 5%; /* Ajuste del margen para que no quede tan alejado */
-    }
-
-    .view {
-        font-size: 20px; /* Reducir el tamaño de la fuente para mejor ajuste */
-        height: 80px; /* Ajustar la altura */
-    }
-
-    .containerButtons {
-        grid-template-columns: repeat(3, 1fr); /* Cambiar a 3 columnas en lugar de 5 */
-    }
-
-    .buttonItem {
-        width: 50px;
-        height: 50px;
-        font-size: 18px;
-    }
-
-    .igual, .delete {
-        height: 110px;
-    }
-}
-
-/* Media Query para pantallas pequeñas (Smartphones) */
 @media (max-width: 480px) {
-    .calculator {
-        margin: 10% 3%;
-        width: 90vw; /* Ajustar para que ocupe un 90% del ancho */
-    }
 
-    .divCalculator {
-        margin: 0 5%;
+    .calculator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin-top: 0; 
     }
 
     .view {
-        font-size: 18px; /* Reducir tamaño de fuente */
-        height: 70px; /* Ajustar la altura */
+        font-size: 20px;
     }
 
-    .containerButtons {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en lugar de 4 */
-    }
 
     .buttonItem {
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
         font-size: 16px;
     }
 
-    .igual, .delete {
-        height: 100px;
+    .button{
+        border: none;
+    }
+
+    .igual,
+    .delete {
+        height: 112px;
     }
 }
